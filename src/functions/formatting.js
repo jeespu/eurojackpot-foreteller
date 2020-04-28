@@ -1,5 +1,3 @@
-const fs = require('fs')
-
 export const processArrays = scrapedNumbers => {
     // Split the array containing EVERY number into two arrays: main numbers and euro numbers
     // 50 main numbers, 10 euro numbers
@@ -26,7 +24,6 @@ export const arrangeResults = async (mains, euros) => {
         resultArray.push([mains[j], euros[i]])
       }
     }
-    fs.writeFileSync('../numbers.txt', resultArray)
     return resultArray
 }
 
