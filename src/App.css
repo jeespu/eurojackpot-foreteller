@@ -1,38 +1,52 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:ital@1&display=swap');
+
+.form-control-lg {
+  width: 100px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url('./img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.SidePanel {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 30%;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.SidePanel div {
+  margin-top: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.SidePanel p {
+  margin: 20px auto;
+  width: 90%;
+  font-size: 20px;
+  color: rgb(253, 252, 239);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SidePanel .btn {
+  margin: 40px auto;
+}
+
+.RowArea {
+  padding-top: 50px;
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  left: 30%;
+  text-align: center;
+}
+
+.RowArea .WinningRow {
+  margin: 16px auto;
+  z-index: -1;
+  font-weight: 500;
 }
