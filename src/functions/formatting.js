@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 export const processArrays = scrapedNumbers => {
     // Split the array containing EVERY number into two arrays: main numbers and euro numbers
     // 50 main numbers, 10 euro numbers
@@ -24,23 +26,9 @@ export const arrangeResults = async (mains, euros) => {
         resultArray.push([mains[j], euros[i]])
       }
     }
-
+    fs.writeFileSync('../numbers.txt', resultArray)
     return resultArray
 }
-
-// const stringifyResults = results => {
-//     let stringArray = []
-
-//     for (let i = 0; i < results.length; i++) {
-//       let string = (( i + 1 ) + ": " +
-//         results[i][0][0].number + ", " + results[i][0][1].number + ", " + results[i][0][2].number + ", " +
-//         results[i][0][3].number + ", " + results[i][0][4].number + " + " + results[i][1][0].number + ", " + 
-//         results[i][1][1].number) + " - " + totalChance(results[i][0], results[i][1]).toFixed(2) + "%"
-//       stringArray.push(string)
-//     }
-
-//     return stringArray
-//   }
 
 // A simple compare function for sorting arrays by their "next draw probability"
 const sortByProbability = arr => {

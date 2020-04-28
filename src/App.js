@@ -27,6 +27,7 @@ const App = () => {
     }
     catch (err) {
       console.error('Something went wrong.', err)
+      setResults([])
     }
     finally {
       setTimeout(() => { setLoaded(true) }, 2000)
