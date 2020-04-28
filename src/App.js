@@ -12,7 +12,7 @@ const App = () => {
   const [resultArray, setResults] = useState([])
   const [mainInput, setMainInput] = useState(1)
   const [euroInput, setEuroInput] = useState(1)
-  const [loaded, setLoaded] = useState()
+  const [loaded, setLoaded] = useState(true)
 
   const getResults = async (mainCombos, euroCombos) => {
     setLoaded(false)
@@ -29,7 +29,7 @@ const App = () => {
       console.error('Something went wrong.', err)
     }
     finally {
-      setLoaded(true)
+      setTimeout(() => { setLoaded(true) }, 2000)
     }
   }
 
